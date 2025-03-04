@@ -1,0 +1,33 @@
+package mc.apptoeat.com.bot.features;
+
+import lombok.Getter;
+import mc.apptoeat.com.bot.features.imple.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+public class FeatureManager {
+    final List<Feature> features;
+    private final StrafeFeature strafeFeature;
+    private final HealthPotionThrowing healthPotionThrowing;
+
+    public FeatureManager() {
+        features = new ArrayList<>();
+
+        addFeature(new EatingAndDrinking());
+        addFeature(healthPotionThrowing = new HealthPotionThrowing());
+        addFeature(new ArmorEquipFeature());
+        addFeature(new Pearling());
+        addFeature(strafeFeature = new StrafeFeature());
+        addFeature(new Soups());
+        addFeature(new WTapFeature());
+        addFeature(new PreGap());
+        addFeature(new RodFeature());
+        addFeature(new EdgeFeature());
+    }
+
+    public void addFeature(Feature feature) {
+        features.add(feature);
+    }
+}

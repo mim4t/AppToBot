@@ -1,0 +1,35 @@
+package mc.apptoeat.com.bot.npc;
+
+import com.mojang.authlib.GameProfile;
+import mc.apptoeat.com.bot.bots.Bot;
+import mc.apptoeat.com.bot.main;
+import mc.apptoeat.com.bot.utils.Nms;
+import net.minecraft.server.v1_8_R3.*;
+import org.bukkit.Bukkit;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.event.entity.EntityCombustByEntityEvent;
+
+public class NPCEntity extends EntityPlayer {
+
+    public NPCEntity(MinecraftServer minecraftserver, WorldServer worldserver, GameProfile gameprofile, PlayerInteractManager playerinteractmanager) {
+        super(minecraftserver, worldserver, gameprofile, playerinteractmanager);
+    }
+
+    @Override
+    protected boolean d(DamageSource damagesource, float f) {
+        boolean d = super.d(damagesource, f);
+        Bot bot = main.getInstance().getBotManager().getNpcFromId(getId());
+        if (bot == null) return d;
+
+        bot.getDamageManager().damage(damagesource,f);
+
+        int fireLevel = EnchantmentManager.getFireAspectEnchantmentLevel(Nms.getPlayer(bot.getMovements().getTargetLocate().getTargetEntity()));
+
+        if (fireLevel > 0) {
+            bot.getHealthManager().fire(fireLevel * 4 * 20);
+        }
+
+        return d;
+    }
+
+}
