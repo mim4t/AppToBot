@@ -91,7 +91,7 @@ public class EatingAndDrinking extends Feature {
 
     public void runEat(Bot bot) {
         bot.getInventoryManager().allowEating();
-        List<ItemStack> list = bot.getInventoryManager().hasItem(364);
+        List<ItemStack> list = bot.getInventoryManager().hasItem(373);
 
         list.forEach(itemStack -> bot.getInventoryManager().eat(itemStack));
     }
