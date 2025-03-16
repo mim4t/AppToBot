@@ -19,6 +19,28 @@ public class Durability {
                 return 0;
             }
         }
+        
+        if (armorPiece.getType() == Material.LEATHER_BOOTS
+                || armorPiece.getType() == Material.LEATHER_LEGGINGS
+                || armorPiece.getType() == Material.LEATHER_CHESTPLATE
+                || armorPiece.getType() == Material.LEATHER_HELMET) {
+            toughness = 1.0;
+        }
+        
+        if (armorPiece.getType() == Material.CHAINMAIL_BOOTS
+                || armorPiece.getType() == Material.CHAINMAIL_LEGGINGS
+                || armorPiece.getType() == Material.CHAINMAIL_CHESTPLATE
+                || armorPiece.getType() == Material.CHAINMAIL_HELMET) {
+            toughness = 1.5;
+        }
+
+        if (armorPiece.getType() == Material.GOLD_BOOTS
+                || armorPiece.getType() == Material.GOLD_LEGGINGS
+                || armorPiece.getType() == Material.GOLD_CHESTPLATE
+                || armorPiece.getType() == Material.GOLD_HELMET) {
+            toughness = 2.0;
+        }
+
 
         if (armorPiece.getType() == Material.IRON_BOOTS
                 || armorPiece.getType() == Material.IRON_LEGGINGS
