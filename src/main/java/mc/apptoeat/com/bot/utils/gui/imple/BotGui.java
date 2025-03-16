@@ -281,8 +281,8 @@ public class BotGui {
                     player.sendMessage(Color.code("&7(You may find search around on https://namemc.com)"));
                     player.closeInventory();
                 } else {
-                    player.sendMessage(Color.code("&cYou need &3VIP &crank to use this."));
-                    player.sendMessage(Color.code("&cStore link: &estore.esta.land"));
+                    player.sendMessage(Color.code("&cYou need &6Prism &crank to use this."));
+                    player.sendMessage(Color.code("&cStore link: &estore.electronmc.club"));
                     player.closeInventory();
                 }
             });
