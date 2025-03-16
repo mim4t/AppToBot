@@ -1,5 +1,5 @@
 ##
-<p align="center">Esta Developent<br><img width="256px" height="256px" src="https://media.discordapp.net/attachments/1238761766968758324/1344400027468173322/SPOILER_logo.png?ex=67c8ae98&is=67c75d18&hm=a79fd6f6e2daf361a73a1367616486dbfc19123726ca5524d2c682fe846b9b2d&=&width=677&height=676"><br><b>aiCore </b><sup>v1.0</sup></p>
+<p align="center">Esta Development<br><img width="256px" height="256px" src="https://media.discordapp.net/attachments/1238761766968758324/1344400027468173322/SPOILER_logo.png?ex=67d72f18&is=67d5dd98&hm=91fc8827190caa9cc9eec0673e2003d57caa4dda3d18926b83919deed335d285&=&width=971&height=969"><br><b>aiCore </b><sup>v1.0</sup></p>
 
 ##
 
