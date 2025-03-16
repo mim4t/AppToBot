@@ -48,7 +48,7 @@ public class InventoryManager extends Manager {
     private boolean requiredToEat;
     private long gappleDelay;
     private net.minecraft.server.v1_8_R3.ItemStack[] armorStacks = new net.minecraft.server.v1_8_R3.ItemStack[4];
-    private  net.minecraft.server.v1_8_R3.ItemStack[] itemStacks = new net.minecraft.server.v1_8_R3.ItemStack[36];
+    private net.minecraft.server.v1_8_R3.ItemStack[] itemStacks = new net.minecraft.server.v1_8_R3.ItemStack[36];
 
     public void updateArmorStacks() {
         armorStacks = new net.minecraft.server.v1_8_R3.ItemStack[4];
