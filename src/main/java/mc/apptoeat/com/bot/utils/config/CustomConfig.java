@@ -32,7 +32,7 @@ public class CustomConfig {
         try {
             this.config.save(this.file);
         } catch (IOException var2) {
-            //Bukkit.broadcastMessage(Color.code("&7Couldnt save file"));
+            Bukkit.broadcastMessage(Color.code("&7Could not save file.."));
         }
 
     }
