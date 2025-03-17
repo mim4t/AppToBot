@@ -1,0 +1,9 @@
+name: aiCore
+version: '1.0-SNAPSHOT'
+main: mc.apptoeat.com.bot.main
+authors: [ Crafticat ]
+description: Nms PVPBots
+softdepend:
+  - aiPractice
+  - aiDatabase
+  - Citizens
