@@ -179,20 +179,19 @@ public class SPManager implements Listener {
     public SettingManager getSettings(DataPlayer data, String level, String kitName, int... tier) {
         //Unranked / ranked queue
         if (level.equals("UNRANKED")) return main.getInstance().getPresetManager().getUnranked().getPreset().getManager();
-        if (level.equals("RANKED")) return main.getInstance().getPresetManager().getRanked().getPreset().getManager();
-       //if (level.equals("RANKED")) {
-            //int elo = getElo(data.getPlayer(), kitName);
+        if (level.equals("RANKED")) {
+            int elo = getElo(data.getPlayer(), kitName);
 
-            //SettingGui closedPreset = null;
-            //int best = 1000;
+            SettingGui closedPreset = null;
+            int best = 1000;
 
-            //for (SettingGui preset : main.getInstance().getPresetManager().getRanked().getPresets()) {
-                //int diff = Math.abs(preset.getManager().getElo() - elo);
-                //if (diff < best) {
-                    //closedPreset = preset;
-                    //best = diff;
-                //}
-            //}
+            for (SettingGui preset : main.getInstance().getPresetManager().getRanked().getPresets()) {
+                int diff = Math.abs(preset.getManager().getElo() - elo);
+                if (diff < best) {
+                    closedPreset = preset;
+                    best = diff;
+                }
+            }
 
             //if (closedPreset != null)
                 //return closedPreset.getManager();
