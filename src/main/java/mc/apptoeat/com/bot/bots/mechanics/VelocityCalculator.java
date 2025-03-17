@@ -52,12 +52,12 @@ public class VelocityCalculator extends Manager {
 
         VelocitySettings velocitySettings = settingManager.getVelocitySettings();
 
-        double h = velocitySettings.getHorizontal().getDoubleValue();
+        double h = 0.527375D;
         double reach = velocitySettings.getDependentRange().getDoubleValue();
         double distMultiplier = velocitySettings.getDependentRangeMultiplier().getDoubleValue();
-        double v = velocitySettings.getVertical().getDoubleValue();
-        double motionMultiplier = velocitySettings.getMotionFriction().getDoubleValue();
-        double extraH = 0;
+        double v = 0.361375D;
+        double motionMultiplier = 1.0D;
+        double extraH = 0.3275D;
         Location botLocation = bot.getMovements().getLocation();
         Location attackerLocation = attacker.getBukkitEntity().getLocation();
 
@@ -79,7 +79,7 @@ public class VelocityCalculator extends Manager {
 
         if (bot.getMovements().isOnGround()) h *= velocitySettings.getGroundMultiplier().getDoubleValue();
         h += extraH;
-        h -= velocitySettings.getHorizontal().getDoubleValue();
+        h -= 0.527375D;
 
         Vector velocity = dir.clone().multiply(new Vector(h, 1, h));
         motion.multiply(-motionMultiplier);
@@ -111,7 +111,7 @@ public class VelocityCalculator extends Manager {
         }
 
         if (!bot.getDamageManager().isCombo()) {
-            velocity.add(getBasedVelocity(distanceX, distanceZ, velocitySettings.getHorizontal().getDoubleValue()));
+            velocity.add(getBasedVelocity(distanceX, distanceZ, 0.527375D));
         }
 
         return velocity;
