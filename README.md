@@ -7,7 +7,7 @@
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ##
-<p align="center">Esta Development<br><img width="256px" height="256px" src="https://media.discordapp.net/attachments/1238761766968758324/1344400027468173322/SPOILER_logo.png?ex=67d72f18&is=67d5dd98&hm=91fc8827190caa9cc9eec0673e2003d57caa4dda3d18926b83919deed335d285&=&width=971&height=969"><br><b>aiCore </b><sup>v1.0</sup></p>
+<p align="center">Esta Development<br><img width="256px" height="256px" src="estadevelopment.png"><br><b>aiCore </b><sup>v1.0</sup></p>
 
 ##
 
